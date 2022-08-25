@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: #ffffff;
+}
+
+/*NAV-BAR-INICIO*/
+a{
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: 0.3s;
+}
+a:hover{
+    font: bold;
+    opacity: 0.7;
+    color: #00ff15;;
+}
+ul{
+    list-style: none;
+}
+.navbar{
+    font-family: 'Lobster';
+    background: #023107;
+    position: fixed;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    z-index: 1100;
+}
+.nav-list{
+    list-style: none;
+    display: flex;
+}
+.nav-list li{
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+.navbar .logo img{
+    width: 200px;
+    height: 150px;
+}
+.mobile-menu{
+    display: none;
+    cursor: pointer;
+}
+.mobile-menu div{
+    width: 32px;
+    height: 2px;
+    background: #ffff;
+    margin: 8px;
+    transition: 0.3s;
+}
+@media (max-width: 999px) {
+    body{
+        overflow-x: hidden;
+    }
+    .nav-list{
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 40vh;
+        background: black;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+    .nav-list li{
+        margin-left: 0;
+        opacity: 0;
+    }
+    .mobile-menu{
+        display: block;
+    }
+    .nav-list.active{
+        transform: translateX(0);
+    }
+}
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+}
+.mobile-menu.active .line1{
+    transform: rotate(-40deg) translate(-10px, 10px);
+
+}
+.mobile-menu.active .line2{
+    opacity: 0;
+}
+
+.mobile-menu.active .line3{
+    transform: rotate(50deg) translate(-7px, 0px);
+}
+
+
+/*INICIO*/
+.video-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -30;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.home{
+    display: flex;
+    background-size: cover;
+    height: 100vh;
+    color: rgb(255, 255, 255);
+    min-height: 500px;
+}
+
+.home .max-width{
+    margin: auto 0 auto 40px;
+}
+.home .home-content{
+    font-family: 'Lobster';
+    margin-top: 300px;
+    margin-left: -350px;
+}
+.home .home-content .text-1{
+    font-size: 27px;
+}
+.home .home-content .text-2{
+    font-size: 75px;
+    font-weight: 500;
+}
+.home .home-content .text-3{
+    font-size: 40px;   
+}
+.home .home-content a{
+    display: inline-block;
+    background: #b97f00;
+    color: #fff;
+    font-size: 25px;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 52px;
+    box-shadow: 0px 2px 2px #e9a209;
+}
+
+.home .home-content a:hover{
+    color: #b97f00;
+    background: none;
+}
+section::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #ffffff,transparent);
+    z-index: 1000;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+
+.container{
+    margin-top: 50px;
+    width: 100%;
+    max-width: 14 00px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    color: #fff;
+    background-color: #ffffff;
+}
+
+.container .card{
+    width: 25%;
+    height: 65%;
+    border-radius: 10px;
+    box-shadow: 0 3px 3px rgba(99, 99, 99, 0.822);
+    overflow: hidden;
+    margin: 30px;
+    text-align: center;
+    transition: all 0.25s;
+}
+.container .card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+.container .card img{
+    width: 240px;
+    height: 150px;
+}
+.container .card h1{
+    color: #041b04;
+    font-size: 15px;
+    font-family: sans-serif;
+}
+.container .card a{
+    padding: 20px 30px;
+    font-weight: 500;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.btn-add{
+    margin-top: 15px;
+    width: 40%;
+    padding: 16px 0px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #ffffff;
+    background: rgb(4, 102, 42);
+    cursor: pointer;
+    box-shadow: 0px 3px 3px rgb(88, 88, 88);
+ }
+.btn-add:hover{
+    background: #00ff15;
+}
+footer{
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #041b04;
+    height: auto;
+    width: 100;
+    font-family: 'Familjen Grotesk', sans-serif;
+    padding-top: 40px;
+    color: #fff;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 20px;
+}
+
+.footer-bottom{
+    background: #041b04;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-bottom p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}

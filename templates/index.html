@@ -1,12 +1,118 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SACOLÃO DO ZÉ</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="/static/logo.png" type="image/x-icon">
+    <title>Sacolão do Zé</title>
 </head>
 <body>
-    <h1>SACOLÃO DO SEU ZÉ ORGANICO E QUALIDADE É AQUI</h1>
+    <!--NAVBAR-->
+    <!--NAVBAR-->
+    <nav class="navbar">
+        <div class="logo"><a href="#">
+            <img src="{{url_for('static', filename='logo.png')}}">
+        </a>
+        </div>
+        <div class="mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <ul class="nav-list">
+            <li class="active"><a href="#">Ínicio</a></li>
+            <li><a href="#">Entrega</a></li>
+            <li><a href="#">Feedbacks</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="#">Pagamento</a></li>
+        </ul>
+    </nav>
+    <!--INICIO-->
+    <section class="home" id="home">
+        <div class="max-width">
+            <div class="home-content">
+                <div class="video-content">
+                    <video src="{{ url_for('static', filename='video.mp4') }}" autoplay muted loop></video>
+                </div>
+                <div class="text-1" data-aos="fade-right" data-aos-duration="1000">Olá, seja bem-vindo ao</div>
+                <div class="text-2" data-aos="fade-right" data-aos-duration="1000">Sacolão do <span>Zé</span></div>
+                <div class="text-3" data-aos="fade-right" data-aos-duration="1000">Qualidade & Confiança<span> você encontra aqui.</span></div>
+            </div>
+        </div>
+    </section>
+        <div class="container" data-aos="fade-up">
+            <div class="card" >
+                <h1>Beterraba <br> R$5.99(100g)</h1>
+                <a href="{{url_for('index')}}">
+                    <img src="{{ url_for('static', filename='beterraba.png') }}">
+                </a>
+                <div>
+                    <button class="btn-add" href='#'>Adicionar(100g)</button>              
+                </div>
+            </div>
+            <div class="card" >
+                <h1>Cenoura <br> R$5.99(100g)</h1>
+                <a href="{{url_for('index')}}">
+                    <img src="{{ url_for('static', filename='cenoura.png') }}">
+                </a>
+                <div>
+                    <button class="btn-add" href='#'>Adicionar </button>              
+                </div>
+            </div>
+            <div class="card" >
+                <h1>Tomate <br> R$5.99 (100g)</h1>
+                <a href="{{url_for('index')}}">
+                    <img src="{{ url_for('static', filename='tomate.png') }}">
+                </a>
+                <div>
+                    <button class="btn-add" href='#'>Adicionar </button>              
+                </div>
+            </div>
+        </div>
+        <div class="container" data-aos="fade-up">
+            <div class="card" >
+                <h1>Batata <br> R$5.99 (100g)</h1>
+                <a href="{{url_for('index')}}">
+                    <img src="{{ url_for('static', filename='batata.png') }}">
+                </a>
+                <div>
+                    <button class="btn-add" href='#'>Adicionar</button>              
+                </div>
+            </div>
+            <div class="card" >
+                <h1>Mandioca <br> R$5.99 (100g)</h1>
+                <a href="{{url_for('index')}}">
+                    <img src="{{ url_for('static', filename='mandioca.png') }}">
+                </a>
+                <div>
+                    <button class="btn-add" href='#'>Adicionar </button>              
+                </div>
+            </div>
+            <div class="card" >
+                <h1>Couve flor<br> R$5.99(100g)</h1>
+                <a href="{{url_for('index')}}">
+                    <img src="{{ url_for('static', filename='couve-flor.jpg') }}">
+                </a>
+                <div>
+                    <button class="btn-add" href='#'>Adicionar </button>              
+                </div>
+            </div>
+        </div>
+        <section>
+
+
+        </section>
+    <script src="script.js"></script>
+    <script src="mobile.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration:1500
+        });
+    </script>
 </body>
 </html>

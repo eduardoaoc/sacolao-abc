@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 from flask_restful import Api
 from blacklist import BLACKLIST
 from resources.fruta import Frutas, Fruta
@@ -38,6 +38,9 @@ api.add_resource(UserRegister, '/register')
 api.add_resource(UserLogin, '/login')      
 api.add_resource(UserLogout, '/logout')      
 
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 if __name__ == '__main__':
     from sql_alchemy import banco
